@@ -194,6 +194,36 @@ h2 {
     margin-top: 4rem;
 }
 
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    transition: background 0.3s, transform 0.3s;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    background: var(--color-accent);
+    transform: scale(1.1);
+}
+
+.social-icons svg {
+    display: block;
+    width: 28px;
+    height: 28px;
+}
+
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -238,4 +268,42 @@ h2 {
     section {
         padding: 3rem 1rem;
     }
+}
+
+.tracks {
+    background-color: var(--color-secondary);
+    padding: 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.track-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.track {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--color-primary);
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    min-width: 260px;
+}
+
+.track-title {
+    font-family: var(--font-primary);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+}
+
+.track audio {
+    width: 220px;
 } 
