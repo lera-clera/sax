@@ -1,0 +1,241 @@
+@font-face {
+    font-family: 'Market Deco';
+    src: url('fonts/market_deco.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --color-primary: #1a1a1a;
+    --color-secondary: #2d2d2d;
+    --color-accent: #8b8b8b;
+    --color-text: #ffffff;
+    --color-text-secondary: #b3b3b3;
+    --font-primary: 'Market Deco', 'Playfair Display', serif;
+    --font-secondary: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-secondary);
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-primary);
+    font-weight: 700;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--color-accent);
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('images/hero-bg.jpg') center/cover no-repeat;
+    position: relative;
+}
+
+.hero h1 {
+    font-family: var(--font-primary);
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: var(--color-text);
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: var(--color-text);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: var(--font-primary);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.about {
+    background-color: var(--color-secondary);
+}
+
+.album {
+    background-color: var(--color-secondary);
+    padding: 5rem 2rem;
+}
+
+.album-cover {
+    max-width: 400px;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.album-cover:hover {
+    transform: scale(1.05);
+}
+
+.album-cover img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.album-cover figcaption {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: var(--color-text);
+    font-size: 1.2rem;
+    font-family: var(--font-primary);
+}
+
+.player-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--color-secondary);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.video {
+    background-color: var(--color-primary);
+    padding: 5rem 2rem;
+}
+
+.video-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--color-secondary);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.video-container iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 4px;
+}
+
+.video-container figcaption {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: var(--color-text);
+    font-size: 1.2rem;
+    font-family: var(--font-primary);
+}
+
+.footer {
+    background-color: var(--color-secondary);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background-color: var(--color-text);
+        margin: 5px 0;
+        transition: 0.3s;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-primary);
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    section {
+        padding: 3rem 1rem;
+    }
+} 
