@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Market Deco';
-    src: url('fonts/market_deco.ttf') format('truetype');
+    src: url('./fonts/market_deco.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
